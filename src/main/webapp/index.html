@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+  
+            font-family: 'Arial', sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .weather-img {
+            height: 250px; /* Adjusted size */
+            width: auto;
+            filter: drop-shadow(10px 10px 10px black);
+            margin-bottom: 30px;
+        }
+        .searchInput {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        #searchInput {
+            padding: 15px; /* Increased padding */
+            font-size: 1.2em; /* Increased font size */
+            border: none;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            width: 350px; /* Increased width */
+        }
+        #searchButton {
+            padding: 0; /* Remove padding to center icon */
+            width: 50px; /* Fixed width to center icon */
+            border: none;
+            background-color: #0072ff;
+            color: white;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #searchButton:hover {
+            background-color: #005bb5;
+        }
+        #searchButton i {
+            font-size: 1.2em; /* Icon size */
+        }
+        h2 {
+            margin-top: 50px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Weather Web App</h1>
+    <img src="images/weather.png" class="weather-img" alt="Weather">
+    <form action="MyServlet" method="post" class="searchInput">
+        <input type="text" placeholder="Enter City Name" id="searchInput" name="city"/>
+        <button id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+    <h2>Technologies Used:</h2>
+    <p>HTML, CSS, Java, Servlet, JSP, OpenWeather API</p>
+</body>
+</html>
